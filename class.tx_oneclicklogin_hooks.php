@@ -10,7 +10,7 @@ class tx_oneclicklogin_hooks{
 		$res = $GLOBALS['TYPO3_DB']->exec_SELECTquery(
 			'*',
 			'be_users',
-			'	NOT tx_openid_openid = "" AND
+			'	tx_openid_openid <> "" AND
 				tx_oneclicklogin_enable = 1 AND
 				disable = 0 AND
 				starttime < ' . $time . ' AND
