@@ -2,17 +2,11 @@
 
 ########################################################################
 # Extension Manager/Repository config file for ext "oneclicklogin".
-#
-# Auto generated 01-09-2010 11:27
-#
-# Manual updates:
-# Only the data in the array - everything else is removed by next
-# writing. "version" and "dependencies" must not be touched!
 ########################################################################
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => '1-Click-Login',
-	'description' => 'For enabled users a 1-Click-Login link is shown at the Backend login screen to log in via OpenID. WARNING: The usernames and OpenID-Identifiers of the enabled users are shown at the login page and are visible for anyone. This should not be a security problem, but If you don\'t want that, don\'t use this extension!',
+	'description' => 'For enabled users a 1-Click-Login link is shown at the Backend login screen to log in via OpenID. WARNING: The usernames and OpenID-Identifiers of the enabled users are shown at the login page and are visible for everyone.',
 	'category' => 'be',
 	'shy' => 0,
 	'version' => '0.2.0',
@@ -34,6 +28,8 @@ $EM_CONF[$_EXTKEY] = array(
 	'CGLcompliance_note' => '',
 	'constraints' => array(
 		'depends' => array(
+			'openid' => '',
+			'typo3' => '4.3.0-0.0.0',
 		),
 		'conflicts' => array(
 		),
