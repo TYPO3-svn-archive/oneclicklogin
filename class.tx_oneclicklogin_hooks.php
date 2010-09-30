@@ -17,7 +17,8 @@ class tx_oneclicklogin_hooks{
 				(endtime = 0 OR endtime > ' . $time . ')',
 			'', 'username ASC');
 		while($beUser = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res)) {
-			$tx_oneclicklogin_users[] = '<a href="#" onclick="TYPO3BackendLogin.switchToOpenId();$(\'t3-username\').value=\'' . $beUser['tx_openid_openid'] . '\';$(\'t3-login-form-outer\').parentNode.submit();TYPO3BackendLogin.showLoginProcess();return false;">' . $beUser['username'] . '</a>';
+			$name = $beUser['realName'] ? $beUser['realName'] : $beUser['username'];
+			$tx_oneclicklogin_users[] = '<a href="#" onclick="TYPO3BackendLogin.switchToOpenId();$(\'t3-username\').value=\'' . $beUser['tx_openid_openid'] . '\';$(\'t3-login-form-outer\').parentNode.submit();TYPO3BackendLogin.showLoginProcess();return false;">' . $name . '</a>';
 		}
 		
 		if(count($tx_oneclicklogin_users)){
