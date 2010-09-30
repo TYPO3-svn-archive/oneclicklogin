@@ -30,8 +30,8 @@ class tx_oneclicklogin_hooks{
 		
 		if(count($tx_oneclicklogin_users)){
 			$TYPO3_CONF_VARS['BE']['loginNews'][] = array(
-				'date' => 'Extension',
-				'header' => '1 Click Login',
+				'date' => $_EXTCONF['text_date'],
+				'header' => $_EXTCONF['text_header'],
 				'content' => join(', ', $tx_oneclicklogin_users),
 			);
 		}
