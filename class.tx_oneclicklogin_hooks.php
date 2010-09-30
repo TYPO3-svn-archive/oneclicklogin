@@ -4,6 +4,12 @@ class tx_oneclicklogin_hooks{
 
 	function addLoginNews(&$params, &$reference) {
 		global $TYPO3_CONF_VARS;
+		$_EXTCONF = unserialize($TYPO3_CONF_VARS['EXT']['extConf']['oneclicklogin']);
+		
+		if($_EXTCONF['use_devIPmask'] && !t3lib_div::cmpIP(t3lib_div::getIndpEnv('REMOTE_ADDR'), $TYPO3_CONF_VARS['SYS']['devIPmask'])) {
+			return;
+		}
+		
 		$tx_onclicklogin_users = array();
 	
 		$time = time();

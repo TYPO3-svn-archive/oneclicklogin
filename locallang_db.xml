@@ -7,9 +7,11 @@
 	<data type="array">
 		<languageKey index="default" type="array">
 			<label index="be_users.tx_oneclicklogin_enable">Enable 1-Click-Login via OpenID</label>
+			<label index="ext_conf.use_devIPmask">Use $TYPO3_CONF_VARS[SYS][devIPmask]:To hide oneclicklogin for the public</label>
 		</languageKey>
 		<languageKey index="de" type="array">
 			<label index="be_users.tx_oneclicklogin_enable">1-Click-Login mit OpenID aktivieren</label>
+			<label index="ext_conf.use_devIPmask">$TYPO3_CONF_VARS[SYS][devIPmask]:Verhindert, dass jeder oneclicklogin sehen kann</label>
 		</languageKey>
 	</data>
 </T3locallang>

@@ -1,0 +1,2 @@
+# cat=basic; type=boolean; label=LLL:EXT:oneclicklogin/locallang_db.xml:ext_conf.use_devIPmask
+use_devIPmask = 0
