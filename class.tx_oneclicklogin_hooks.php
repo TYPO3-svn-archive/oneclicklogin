@@ -13,6 +13,7 @@ class tx_oneclicklogin_hooks{
 			'	tx_openid_openid <> "" AND
 				tx_oneclicklogin_enable = 1 AND
 				disable = 0 AND
+				deleted = 0 AND
 				starttime < ' . $time . ' AND
 				(endtime = 0 OR endtime > ' . $time . ')',
 			'', 'username ASC');
