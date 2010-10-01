@@ -6,7 +6,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => '1-Click-Login',
-	'description' => 'For enabled users a 1-Click-Login link is shown at the Backend login screen to log in via OpenID. WARNING: The usernames and OpenID-Identifiers of the enabled users are shown at the login page and are visible for everyone.',
+	'description' => 'For enabled users a 1-Click-Login link is shown at the Backend login screen to log in via OpenID.',
 	'category' => 'be',
 	'shy' => 0,
 	'version' => '0.3.0',
